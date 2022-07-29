@@ -30,19 +30,36 @@ pool.query('select * from empleados').then(function (resultados) {
   console.log(resultados)
 });
 
+//var obj = {
+//  nombre: 'Juan',
+//  apellido: 'Lopez',
+//  trabajo: 'docente',
+//  edad: 38,
+//  salario: 1500,
+// email: 'juanlopez@gmail.com'
+//}
 
-var obj = {
-  nombre: 'Juan',
-  apellido: 'Lopez',
-  trabajo: 'docente',
-  edad: 38,
-  salario: 1500,
-  mail: 'juanlopez@gmail.com'
-}
+//pool.query('insert into empleados set ?', [obj]).then(function
 
-pool.query('insert into empleados set ?',[obj]).then(function
+//  (resultados) {
+//  console.log(resultados)
+//});
+
+//var id = 26;
+//var obj = {
+//  nombre: 'Pablo',
+//  apellido: 'Gomez'
+//}
+
+//pool.query('update empleados set ? where id=?', [obj, id]).then
+//  (function (resultados) {
+//    console.log(resultados);
+//  });
+
+var id = 26;
+pool.query('delete from empleados where id=?' , [id]).then (function
   (resultados){
-console.log(resultados)
+console.log(resultados);
   });
 
 // catch 404 and forward to error handler
